@@ -12,13 +12,10 @@ export default function SimpleProfileForm() {
   });
   const [role, setRole] = useState("general staff");
 
-  const hobbyList = useMemo(() => {
-    const list = [];
-    if (hobbies.music) list.push("Music");
-    if (hobbies.movies) list.push("Movies");
-    if (hobbies.plasticModel) list.push("Plastic Model");
-    return list;
-  }, [hobbies]);
+  const hobbyList = []
+    if (hobbies.music) hobbyList.push("Music");
+    if (hobbies.movies) hobbyList.push("Movies");
+    if (hobbies.plasticModel) hobbyList.push("Plastic Model");
 
   return (
     <div className="form_box">
